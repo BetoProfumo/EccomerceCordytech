@@ -199,102 +199,94 @@ height: 59px;
 /* ********************************** */
 /*             Main content           */
 /* ********************************** */
-
 .main-content {
 	background-color: var(--background-color);
 }
-main {
+body {
     background-color: #f9f5f0;
     margin: 0;
     padding: 0;
 }
 
-/* General */
-body {
-    margin: 0;
-    padding: 0;
+
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column; /* Organiza header, main y footer en columna */
-    height: 100vh; /* Ocupa toda la pantalla */
 }
 
-
-/* Main */
-main {
-    flex: 1; /* Toma todo el espacio disponible entre header y footer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
- /* Contenedor del formulario */
-.login-container {
-    background-color: #ffffff;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    padding: 60px 80px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    width: 790px;
+  /* Título del formulario */
+.form-container h2 {
     text-align: center;
-}
-
-/* Título */
-.login-container h1 {
-    margin: 0 0 30px 0;
-    font-size: 2em;
     color: #333;
+    margin-bottom: 20px;
 }
 
-/* Labels */
-.login-container label {
+  /* Estilos generales para etiquetas */
+.form-container label {
     display: block;
-    margin: 15px 0 8px;
     font-weight: bold;
-    font-size: 1.2em;
+    margin-bottom: 5px;
     color: #555;
 }
 
-/* Inputs */
-.login-container input {
+  /* Estilos para inputs y select */
+.form-container input,
+.form-container select,
+.form-container textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
     box-sizing: border-box;
 }
 
-/* Botón */
-.login-container button {
+  /* Efecto de hover y focus en los inputs */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+  /* Estilo específico para el botón */
+.form-container button {
+    display: block;
     width: 100%;
-    padding: 15px;
-    font-size: 1.2em;
-    color: white;
-    background-color: #1754e4;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.login-container button:hover {
-    background-color: #1641a3;
+  /* Hover del botón */
+.form-container button:hover {
+    background-color: #0056b3;
 }
 
-/* Mensaje */
-#message {
-    font-size: 1em;
-    color: red;
-    margin-top: 15px;
+  /* Mensajes de ayuda */
+.form-container p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
-
-/* ********************************** */
-/*               FOOTER               */
-/* ********************************** */
 
 .footer {
 	background-color: var(--primary-color);
@@ -689,3 +681,111 @@ main {
     font-size: 16px;
     color: #333;
 }
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.product-container {
+    display: flex;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.product-image-container,
+.product-info-container,
+.product-availability-container {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+.product-info-container h2 {
+    font-size: 24px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.product-info-container .platform {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-info-container .rating {
+    font-size: 16px;
+    color: #ffbf00;
+    margin-bottom: 10px;
+}
+
+.product-info-container .price {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.product-availability-container h3 {
+    font-size: 18px;
+    color: #28a745;
+}
+
+.product-availability-container p {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.product-availability-container ul {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+}
+
+.btn-buy, .btn-add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn-buy:hover, .btn-add-to-cart:hover {
+    background-color: #123cb1;
+}
+

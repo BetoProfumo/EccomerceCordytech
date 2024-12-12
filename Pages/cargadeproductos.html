@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Styles/cargadeproductos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Agregar Producto</title>
+</head>
+<body>
+  <header>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">2604000684</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <img class="Corditechlogo" src="/Assets/Logo Eccomerce ver(1).png">
+                <h1 class="logo"><a href="../Index.html">CordYtech</a></h1>
+            </div>
+
+            <div class="container-user">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart">
+                    <span class="text">Carrito</span>
+                    <span class="number">(0)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-navbar">
+        <nav class="navbar container">
+            <i class="fa-solid fa-bars"></i>
+            <ul class="menu">
+                <li><a href="../Index.html">Inicio</a></li>
+                <li><a href="/Pages/FAQ.html">FAQ</a></li>
+                <li><a href="/Pages/explorar.html">Explorar</a></li>
+            </ul>
+
+            <form class="search-form">
+                <input type="search" placeholder="Buscar..." />
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </nav>
+    </div>
+</header>
+<div class="form-container">
+  <form id="productForm">
+    <h2>Agregar Nuevo Producto</h2>
+    <!-- ID (Generado automáticamente) -->
+    <p><strong>El ID será generado automáticamente (mayor a 16).</strong></p>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required />
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" required />
+
+    <label for="precioAnterior">Precio Anterior:</label>
+    <input type="number" id="precioAnterior" />
+
+    <label for="descuento">Descuento (ej: -25%):</label>
+    <input type="text" id="descuento" />
+
+    <label for="imagen">Imagen (URL o Ruta):</label>
+    <input type="text" id="imagen" required />
+
+    <label for="estrellas">Estrellas (1-5):</label>
+    <input type="number" id="estrellas" min="1" max="5" step="0.1" required />
+
+    <label for="platform">Plataforma:</label>
+    <input type="text" id="platform" required />
+
+    <label for="format">Formato:</label>
+    <input type="text" id="format" required />
+
+    <label for="rating">Clasificación:</label>
+    <input type="text" id="rating" required />
+
+    <label for="releaseYear">Año de Lanzamiento:</label>
+    <input type="number" id="releaseYear" required />
+
+    <label for="developer">Desarrollador:</label>
+    <input type="text" id="developer" required />
+
+    <label for="genre">Género:</label>
+    <input type="text" id="genre" required />
+
+    <label for="fileSize">Tamaño de Archivo:</label>
+    <input type="text" id="fileSize" required />
+
+    <label for="minRAM">RAM Mínima:</label>
+    <input type="text" id="minRAM" required />
+
+    <label for="onlinePlay">Juego Online:</label>
+    <select id="onlinePlay">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" required></textarea>
+
+    <label for="reciente">Reciente:</label>
+    <select id="reciente">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <label for="destacado">Destacado:</label>
+    <select id="destacado">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <label for="modohistoria">Modo Historia:</label>
+    <select id="modohistoria">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <label for="deportes">Deportes:</label>
+    <select id="deportes">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <label for="accion">Acción:</label>
+    <select id="accion">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+
+    <button type="submit">Agregar Producto</button>
+  </form>
+</div>
+    <footer class="footer">
+      <div class="container container-footer">
+          <div class="menu-footer">
+              <div class="contact-info">
+                  <p class="title-footer">Información de Contacto</p>
+                  <ul>
+                      <li>
+                          Dirección: San Rafael Mendoza, Argentina
+                      </li>
+                      <li>Teléfono: 2604000684</li>
+                      <li>EmaiL: Valentinoprofu@gmail.com</li>
+                  </ul>
+                  <div class="social-icons">
+                      <span class="facebook">
+                          <i class="fa-brands fa-facebook-f"></i>
+                      </span>
+                      <span class="twitter">
+                          <i class="fa-brands fa-twitter"></i>
+                      </span>
+                      <span class="youtube">
+                          <i class="fa-brands fa-youtube"></i>
+                      </span>
+                      <span class="pinterest">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                      </span>
+                      <span class="instagram">
+                          <i class="fa-brands fa-instagram"></i>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="information">
+                  <p class="title-footer">Información</p>
+                  <ul>
+                      <li><a href="#">Acerca de Nosotros</a></li>
+                      <li><a href="#">Información Delivery</a></li>
+                      <li><a href="#">Politicas de Privacidad</a></li>
+                      <li><a href="#">Términos y condiciones</a></li>
+                      <li><a href="#">Contactános</a></li>
+                  </ul>
+              </div>
+
+              <div class="my-account">
+                  <p class="title-footer">Mi cuenta</p>
+
+                  <ul>
+                      <li><a href="#">Mi cuenta</a></li>
+                      <li><a href="#">Historial de ordenes</a></li>
+                      <li><a href="#">Carrito de Compras</a></li>
+                      <li><a href="#">Reembolsos</a></li>
+                  </ul>
+              </div>
+
+              <div class="newsletter">
+                  <p class="title-footer">Nuevos Ingresos</p>
+
+                  <div class="content">
+                      <p>
+                          Ingresa tu E-Mail para mantenerte informado de todos los nuevos ingresos.
+                      </p>
+                      <input type="email" placeholder="Ingresa el correo aquí...">
+                      <button>Suscríbete</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="copyright">
+              <p>
+                  Todos los derechos Reservados <Strong>Cordytech 2024 <Strong>
+              </p>
+
+          </div>
+      </div>
+  </footer>
+  </form>
+
+  <script src="../js/cargadeproductos.js"></script>
+</body>
+</html>
