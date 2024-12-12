@@ -11,7 +11,7 @@ function renderProductos(productos, containerId) {
         const productoHTML = `
         <div class="card-product">
             <div class="container-img">
-                <a href="../Pages/product-details.html">
+                <a href="../Pages/error.html">
                     <img src="${producto.imagen}" alt="${producto.nombre}" />
                 </a>
                 ${producto.descuento ? `<span class="discount">${producto.descuento}</span>` : ""}

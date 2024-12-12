@@ -2,11 +2,11 @@ const contenedor = document.getElementById("galeria-productos");
 
 function cargarProductos() {
 
-    bdproductos.forEach((producto) => {
+    bdproductos.forEach((producto,) => {
         const productoHTML = `
             <div class="card-product">
                 <div class="container-img">
-                    <a href="../Pages/product-details.html" class="product-link" data-product='${JSON.stringify(producto)}'>
+                    <a href="../Pages/error.html" class="product-link" data-product='${JSON.stringify(producto)}'>
                         <img src="${producto.imagen}" alt="${producto.nombre}" />
                     </a>
                     ${producto.descuento ? `<span class="discount">${producto.descuento}</span>` : ""}

@@ -61,17 +61,3 @@ document.querySelectorAll(".product-link").forEach((link) => {
 
 
 
-//CODIGO INICIO DE SESION
-// Verificar si está logueado
-if (localStorage.getItem("loggedIn") !== "true") {
-  alert("Debes iniciar sesión para acceder a esta página.");
-  window.location.href = "login.html"; // Redirigir al login si no está logueado
-}
-
-// Manejar cierre de sesión
-const logoutButton = document.getElementById("logoutButton");
-logoutButton.addEventListener("click", () => {
-  localStorage.removeItem("loggedIn"); // Eliminar sesión del localStorage
-  alert("Has cerrado sesión.");
-  window.location.href = "login.html"; // Redirigir al login
-});
