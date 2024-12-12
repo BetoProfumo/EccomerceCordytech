@@ -197,414 +197,98 @@ height: 59px;
 }
 
 /* ********************************** */
-/*               BANNER               */
+/*             Main content           */
 /* ********************************** */
-.banner {
-	background-image: linear-gradient(100deg, #000000, #00000020),
-		url('/Assets/Playstation\ 5.jpg');
-	height: 60rem;
-	background-size: cover;
-	background-position: center;
-}
 
-.content-banner {
-	max-width: 90rem;
-	margin: 0 auto;
-	padding: 25rem 0;
-}
-
-.content-banner p {
-	color: var(--primary-color);
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	font-weight: 500;
-}
-
-.content-banner h2 {
-	color: #fff;
-	font-size: 3.5rem;
-	font-weight: 500;
-	line-height: 1.2;
-}
-
-.content-banner a {
-	margin-top: 2rem;
-	text-decoration: none;
-	color: #fff;
-	background-color: var(--primary-color);
-	display: inline-block;
-	padding: 1rem 3rem;
-	text-transform: uppercase;
-	border-radius: 3rem;
-}
-
-/* ********************************** */
-/*            MAIN CONTENT            */
-/* ********************************** */
 .main-content {
 	background-color: var(--background-color);
 }
-
-
-/* ********************************** */
-/*              FEATURES              */
-/* ********************************** */
-.container-features {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 3rem;
-	padding: 3rem 0;
+main {
+    background-color: #f9f5f0;
+    margin: 0;
+    padding: 0;
 }
 
-.card-feature {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1.5rem;
-
-	background-color: #fff;
-	border-radius: 1rem;
-	padding: 1.5rem 0;
-}
-
-.card-feature i {
-	font-size: 2.7rem;
-	color: var(--primary-color);
-}
-
-.feature-content {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-}
-
-.feature-content span {
-	font-weight: 700;
-	font-size: 1.2rem;
-	color: var(--dark-color);
-}
-
-.feature-content p {
-	color: #777;
-	font-weight: 500;
-}
-
-/* ********************************** */
-/*             CATEGORIES             */
-/* ********************************** */
-
-.top-categories {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
-}
-
-.container-categories {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
-}
-
-.card-category {
-	height: 20rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 2rem;
-	gap: 2rem;
-}
-
-.category-action {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/6zhGBKQpPrlLNI2a7EfALNs1.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.linkacategorias {
-	color: #fff;
-	text-decoration: none
-}
-
-.category-sports {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/Fifa.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.category-story {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/the-last-of-us-parte-1.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.card-category p {
-	font-size: 2.5rem;
-	color: #fff;
-	text-transform: capitalize;
-	position: relative;
-}
-
-.card-category p::after {
-	content: '';
-	width: 2.5rem;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	bottom: -1rem;
-	left: 50%;
-	transform: translate(-50%, 50%);
-}
-
-.card-category span {
-	font-size: 1.6rem;
-	color: #fff;
-	cursor: pointer;
-}
-
-.card-category span:hover {
-	color: var(--primary-color);
-}
-
-/* ********************************** */
-/*            TOP PRODUCTS            */
-/* ********************************** */
-.top-products {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
-}
-
-.container-options {
-	display: flex;
-	justify-content: center;
-	gap: 2rem;
-	margin-bottom: 1rem;
-}
-
-.container-options button {
-	color: #777;
-	background-color: #fff;
-	padding: 0.7rem 3rem;
-	font-size: 1.4rem;
-	text-transform: capitalize;
-	border-radius: 2rem;
-	cursor: pointer;
-}
-
-.container-options button:hover {
-	background-color: var(--primary-color);
-	color: #fff;
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Organiza header, main y footer en columna */
+    height: 100vh; /* Ocupa toda la pantalla */
 }
 
 
-/* Products */
-.container-products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Crea exactamente 4 columnas */
-    gap: 2rem; /* Espacio entre las tarjetas */
-
+/* Main */
+main {
+    flex: 1; /* Toma todo el espacio disponible entre header y footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
-/* Tarjeta del producto */
-.card-product {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+ /* Contenedor del formulario */
+.login-container {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 60px 80px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 790px;
     text-align: center;
 }
 
-.container-img {
-	position: relative;
+/* Título */
+.login-container h1 {
+    margin: 0 0 30px 0;
+    font-size: 2em;
+    color: #333;
 }
 
-.container-img img {
-	width: 100%;
+/* Labels */
+.login-container label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #555;
 }
 
-.container-img .discount {
-	position: absolute;
-	left: 0;
-	background-color: var(--primary-color);
-	color: #fff;
-	padding: 2px 1.2rem;
-	border-radius: 1rem;
-	font-size: 1.2rem;
+/* Inputs */
+.login-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
-.card-product:hover .discount {
-	background-color: #000;
-}
-
-/* Grupo de botones */
-/* Contenedor de las tarjetas */
-.card-product {
-    position: relative; /* Necesario para posicionar los botones */
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 0.5rem;
+/* Botón */
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    font-weight: bold;
 }
 
-.card-product:hover {
-    transform: scale(1.05); /* Efecto de "zoom" al pasar el cursor */
+.login-container button:hover {
+    background-color: #45a049;
 }
 
-/* Grupo de botones */
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 50%;
-    right: -3rem;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all 0.4s ease;
-    z-index: -1;
-}
-
-.button-group span {
-    width: 3rem; /* Ajusta el tamaño del botón */
-    height: 3rem;
-    border: 2px solid var(--primary-color); /* Borde más grueso para destacar */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #fff;
-    transition: all 0.4s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega sombra para resaltar */
-}
-
-.button-group span:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-}
-
-.button-group span i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.button-group span:hover i {
-    color: #fff;
-}
-
-/* Mostrar los botones al pasar el cursor */
-.card-product:hover .button-group {
-    right: 1rem;
-    opacity: 1;
-    z-index: 1;
-}
-
-/* Contenido de la tarjeta de producto */
-.content-card-product {
-	display: grid;
-	justify-items: center;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(4, min-content);
-	row-gap: 1rem;
-}
-
-.stars {
-	grid-row: 1/2;
-	grid-column: 1/-1;
-}
-
-.stars i {
-	font-size: 1.3rem;
-	color: var(--primary-color);
-}
-
-.content-card-product h3 {
-	grid-row: 2/3;
-	grid-column: 1/-1;
-
-	font-weight: 400;
-	font-size: 1.6rem;
-	margin-bottom: 1rem;
-	cursor: pointer;
-}
-
-.content-card-product h3:hover {
-	color: var(--primary-color);
-}
-
-.add-cart {
-	justify-self: start;
-	border: 2px solid var(--primary-color);
-	padding: 1rem;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.4s ease;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.add-cart:hover {
-	background-color: var(--primary-color);
-}
-
-.add-cart i {
-	font-size: 1.5rem;
-	color: var(--primary-color);
-}
-
-.add-cart:hover i {
-	color: #fff;
-}
-
-.content-card-product .price {
-	justify-self: end;
-	align-self: center;
-
-	font-size: 1.7rem;
-	font-weight: 600;
-}
-
-.content-card-product .price span {
-	font-size: 1.5rem;
-	font-weight: 400;
-	text-decoration: line-through;
-	color: #777;
-	margin-left: 0.5rem;
-}
-
-.destacadostitle {
-	font-weight: 300;
-	font-size: 1.6rem;
-}
-
-.masrecientestitle {
-	font-weight: 300;
-	font-size: 1.6rem;
-}
-/* ********************************** */
-/*              SPECIALS              */
-/* ********************************** */
-.specials {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
+/* Mensaje */
+#message {
+    font-size: 1em;
+    color: red;
+    margin-top: 15px;
 }
 
 
@@ -880,7 +564,6 @@ height: 59px;
 		gap: 1.5rem;
 	}
 }
-
 
 @media (max-width: 468px) {
 	html {

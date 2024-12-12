@@ -197,54 +197,16 @@ height: 59px;
 }
 
 /* ********************************** */
-/*               BANNER               */
-/* ********************************** */
-.banner {
-	background-image: linear-gradient(100deg, #000000, #00000020),
-		url('/Assets/Playstation\ 5.jpg');
-	height: 60rem;
-	background-size: cover;
-	background-position: center;
-}
-
-.content-banner {
-	max-width: 90rem;
-	margin: 0 auto;
-	padding: 25rem 0;
-}
-
-.content-banner p {
-	color: var(--primary-color);
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	font-weight: 500;
-}
-
-.content-banner h2 {
-	color: #fff;
-	font-size: 3.5rem;
-	font-weight: 500;
-	line-height: 1.2;
-}
-
-.content-banner a {
-	margin-top: 2rem;
-	text-decoration: none;
-	color: #fff;
-	background-color: var(--primary-color);
-	display: inline-block;
-	padding: 1rem 3rem;
-	text-transform: uppercase;
-	border-radius: 3rem;
-}
-
-/* ********************************** */
-/*            MAIN CONTENT            */
+/*             Main content           */
 /* ********************************** */
 .main-content {
 	background-color: var(--background-color);
 }
-
+body {
+    background-color: #f9f5f0;
+    margin: 0;
+    padding: 0;
+}
 
 /* ********************************** */
 /*              FEATURES              */
@@ -288,91 +250,6 @@ height: 59px;
 	color: #777;
 	font-weight: 500;
 }
-
-/* ********************************** */
-/*             CATEGORIES             */
-/* ********************************** */
-
-.top-categories {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
-}
-
-.container-categories {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
-}
-
-.card-category {
-	height: 20rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 2rem;
-	gap: 2rem;
-}
-
-.category-action {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/6zhGBKQpPrlLNI2a7EfALNs1.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.linkacategorias {
-	color: #fff;
-	text-decoration: none
-}
-
-.category-sports {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/Fifa.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.category-story {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('/Assets/the-last-of-us-parte-1.jpg');
-	background-size: cover;
-	background-position: 50% 20%;
-	background-repeat: no-repeat;
-}
-
-.card-category p {
-	font-size: 2.5rem;
-	color: #fff;
-	text-transform: capitalize;
-	position: relative;
-}
-
-.card-category p::after {
-	content: '';
-	width: 2.5rem;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	bottom: -1rem;
-	left: 50%;
-	transform: translate(-50%, 50%);
-}
-
-.card-category span {
-	font-size: 1.6rem;
-	color: #fff;
-	cursor: pointer;
-}
-
-.card-category span:hover {
-	color: var(--primary-color);
-}
-
 /* ********************************** */
 /*            TOP PRODUCTS            */
 /* ********************************** */
@@ -597,17 +474,6 @@ height: 59px;
 	font-weight: 300;
 	font-size: 1.6rem;
 }
-/* ********************************** */
-/*              SPECIALS              */
-/* ********************************** */
-.specials {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
-}
-
-
 /* ********************************** */
 /*               FOOTER               */
 /* ********************************** */
@@ -881,7 +747,6 @@ height: 59px;
 	}
 }
 
-
 @media (max-width: 468px) {
 	html {
 		font-size: 42.5%;
@@ -1006,3 +871,111 @@ height: 59px;
     font-size: 16px;
     color: #333;
 }
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.product-container {
+    display: flex;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.product-image-container,
+.product-info-container,
+.product-availability-container {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+.product-info-container h2 {
+    font-size: 24px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.product-info-container .platform {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-info-container .rating {
+    font-size: 16px;
+    color: #ffbf00;
+    margin-bottom: 10px;
+}
+
+.product-info-container .price {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.product-availability-container h3 {
+    font-size: 18px;
+    color: #28a745;
+}
+
+.product-availability-container p {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.product-availability-container ul {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+}
+
+.btn-buy, .btn-add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn-buy:hover, .btn-add-to-cart:hover {
+    background-color: #123cb1;
+}
+

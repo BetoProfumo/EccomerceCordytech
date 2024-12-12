@@ -1,9 +1,16 @@
 // product-details.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Recuperar el producto seleccionado desde Local Storage
-    const producto = JSON.parse(localStorage.getItem('selectedProduct'));
+    //recupero el id desde url
+    const querystring = window.location.search
+    const params = new URLSearchParams(querystring)
+    const pid = params.get("pid")
+    //obtener base de datos
+    const basededatostemp = JSON.parse(localStorage.getItem("bdProductos"))
+    // Recuperar el producto seleccionado desde DB
 
+    const producto= basededatostemp.find( (producto)=> producto.id == pid) 
+    console.log(producto);
     if (producto) {
         // Insertar datos en los elementos HTML
         document.getElementById('product-image').src = producto.imagen;

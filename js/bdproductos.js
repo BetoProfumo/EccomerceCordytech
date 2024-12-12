@@ -1,8 +1,5 @@
 //Base de datos de trabajo
-let bdproducto;
-
-//Productos para rellenar
-const bdproductos = [
+const bdproductos = JSON.parse(localStorage.getItem("bdProductos")) ||  [
     {
                     id:1,
                     nombre: "The Last of Us Part II",
@@ -295,7 +292,7 @@ const bdproductos = [
                     precio: 30,
                     precioAnterior: 50,
                     descuento: "-40%",
-                    imagen: "/Assets/MortalKombat1.png",
+                    imagen: "/Assets/Mortal Kombat portada.png",
                     estrellas: 4.5,
                     platform: "PS4, PS5",
                     format: "Digital",
@@ -334,7 +331,7 @@ const bdproductos = [
                     reciente: false,
                     destacado: false,
                     modohistoria:false,
-                    deportes: false,
+                    deportes: true,
                     accion:false
                 },
                 {
@@ -386,6 +383,9 @@ const bdproductos = [
                     accion:true
                 }
 ]
+
+localStorage.setItem("bdProductos", JSON.stringify(bdproductos))
+
 // Seleccionar contenedores del DOM
 const destacadosContainer = document.getElementById("productosDestacados");
 const recientesContainer = document.getElementById("productosRecientes");
@@ -397,12 +397,24 @@ productos.forEach((producto) => {
     const productoHTML = `
     <div class="card-product">
         <div class="container-img">
-        <a href="Pages/product-details.html" class="product-link">
+        <a href="Pages/product-details.html?pid=${producto.id}"  class="product-link">
             <img src="${producto.imagen}" alt="${producto.nombre}" />
         </a>
         ${producto.descuento ? `<span class="discount">${producto.descuento}</span>` : ""}
+        <div class="button-group">
+            <span><i class="fa-regular fa-eye"></i></span>
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
         </div>
         <div class="content-card-product">
+        <div class="stars">
+        ${Array.from({ length: 5 }, (_, i) =>
+                            i < producto.estrellas
+                                ? '<i class="fa-solid fa-star"></i>'
+                                : '<i class="fa-regular fa-star"></i>'
+                        ).join("")}
+                    </div>
         <h3>${producto.nombre}</h3>
         <p class="price">
             $${producto.precio} 
@@ -414,7 +426,9 @@ productos.forEach((producto) => {
     container.innerHTML += productoHTML;
 });
 }
-
+function dataSave(){
+    localStorage.setItem("hola")
+}
 // Filtrar productos destacados y recientes
 const destacados = bdproductos.filter((producto) => producto.destacado);
 const recientes = bdproductos.filter((producto) => producto.reciente);
@@ -422,4 +436,3 @@ const recientes = bdproductos.filter((producto) => producto.reciente);
 // Mostrar productos en las secciones correspondientes
 renderProductos(destacadosContainer, destacados);
 renderProductos(recientesContainer, recientes);
-

@@ -3,7 +3,7 @@ bdproductos.forEach((producto, index) => {
   const productoHTML = `
     <div class="card-product">
       <div class="container-img">
-        <a href="" class="product-link" data-index="${index}">
+        <a href="../Pages/product-details.html" class="product-link" data-index="${index}">
           <img src="${producto.imagen}" alt="${producto.nombre}" />
         </a>
         ${producto.descuento ? `<span class="discount">${producto.descuento}</span>` : ""}
@@ -52,7 +52,7 @@ document.querySelectorAll(".product-link").forEach((link) => {
       localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
 
       // Redirigir a la página de detalles
-      window.location.href = "Pages/product-details.html"; // Asegúrate de que la ruta sea correcta
+      window.location.href = "../Pages/product-details.html"; // Asegúrate de que la ruta sea correcta
     } else {
       console.error("Producto no encontrado.");
     }
@@ -60,3 +60,18 @@ document.querySelectorAll(".product-link").forEach((link) => {
 });
 
 
+
+//CODIGO INICIO DE SESION
+// Verificar si está logueado
+if (localStorage.getItem("loggedIn") !== "true") {
+  alert("Debes iniciar sesión para acceder a esta página.");
+  window.location.href = "login.html"; // Redirigir al login si no está logueado
+}
+
+// Manejar cierre de sesión
+const logoutButton = document.getElementById("logoutButton");
+logoutButton.addEventListener("click", () => {
+  localStorage.removeItem("loggedIn"); // Eliminar sesión del localStorage
+  alert("Has cerrado sesión.");
+  window.location.href = "login.html"; // Redirigir al login
+});
